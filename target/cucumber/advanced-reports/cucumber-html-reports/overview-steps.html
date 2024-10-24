@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>soc-ui-testing</td>
+        <td>1</td>
+      <td>04 Jun 2024, 19:15</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.soc.steps.AddIntentSteps.the_user_fills_in_the_following_details(java.util.List&lt;java.util.Map&lt;java.lang.String, java.lang.String&gt;&gt;)</td>
+              <td>5</td>
+              <td class="duration" data-value="12258987540">12.258</td>
+              <td class="duration" data-value="12258987540">12.357</td>
+              <td class="duration" data-value="61294937700">1:1.294</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.AddIntentSteps.the_user_navigates_to_the_intent_form_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="14159460966">14.159</td>
+              <td class="duration" data-value="14159460966">14.251</td>
+              <td class="duration" data-value="42478382900">42.478</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.AddIntentSteps.the_user_should_be_redirected_to_the_landing_page()</td>
+              <td>4</td>
+              <td class="duration" data-value="12687543950">12.687</td>
+              <td class="duration" data-value="12687543950">12.707</td>
+              <td class="duration" data-value="50750175800">50.750</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.AddIntentSteps.the_user_should_see_an_error_message()</td>
+              <td>1</td>
+              <td class="duration" data-value="12048702100">12.048</td>
+              <td class="duration" data-value="12048702100">12.048</td>
+              <td class="duration" data-value="12048702100">12.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.AddIntentSteps.the_user_submits_the_form()</td>
+              <td>3</td>
+              <td class="duration" data-value="12233130300">12.233</td>
+              <td class="duration" data-value="12233130300">12.240</td>
+              <td class="duration" data-value="36699390900">36.699</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.EditKitchenConversationSteps.the_user_clicks_on_the_edit_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="251182550">0.251</td>
+              <td class="duration" data-value="251182550">0.251</td>
+              <td class="duration" data-value="502365100">0.502</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.EditKitchenConversationSteps.the_user_clicks_on_the_submit_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="220201150">0.220</td>
+              <td class="duration" data-value="220201150">0.220</td>
+              <td class="duration" data-value="440402300">0.440</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.EditKitchenConversationSteps.the_user_edits_the_kitchen_closure_conversation_name()</td>
+              <td>1</td>
+              <td class="duration" data-value="1052799000">1.052</td>
+              <td class="duration" data-value="1052799000">1.052</td>
+              <td class="duration" data-value="1052799000">1.052</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.EditKitchenConversationSteps.the_user_edits_the_kitchen_location()</td>
+              <td>1</td>
+              <td class="duration" data-value="1053334100">1.053</td>
+              <td class="duration" data-value="1053334100">1.053</td>
+              <td class="duration" data-value="1053334100">1.053</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.GenerateCsvSteps.the_csv_file_gets_generated()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.GenerateCsvSteps.user_clicks_on_the_csv_generating_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="238863500">0.238</td>
+              <td class="duration" data-value="238863500">0.238</td>
+              <td class="duration" data-value="238863500">0.238</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.Hooks.setup()</td>
+              <td>12</td>
+              <td class="duration" data-value="681566">0.000</td>
+              <td class="duration" data-value="681566">0.003</td>
+              <td class="duration" data-value="8178800">0.008</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>12</td>
+              <td class="duration" data-value="472178200">0.472</td>
+              <td class="duration" data-value="472178200">0.784</td>
+              <td class="duration" data-value="5666138400">5.666</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.IntentListSteps.the_data_in_the_list_should_match_the_predefined_dataset()</td>
+              <td>1</td>
+              <td class="duration" data-value="10015076700">10.015</td>
+              <td class="duration" data-value="10015076700">10.015</td>
+              <td class="duration" data-value="10015076700">10.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.IntentListSteps.the_user_navigates_to_the_Intent_List_Page()</td>
+              <td>3</td>
+              <td class="duration" data-value="42710484000">42.710</td>
+              <td class="duration" data-value="42710484000">1:39.980</td>
+              <td class="duration" data-value="128131452000">2:8.131</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.IntentListSteps.user_fetch_the_data_from_the_list()</td>
+              <td>1</td>
+              <td class="duration" data-value="12273449800">12.273</td>
+              <td class="duration" data-value="12273449800">12.273</td>
+              <td class="duration" data-value="12273449800">12.273</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.IntentStatusSteps.the_activation_status_of_the_last_intent_should_be_toggled()</td>
+              <td>1</td>
+              <td class="duration" data-value="847060400">0.847</td>
+              <td class="duration" data-value="847060400">0.847</td>
+              <td class="duration" data-value="847060400">0.847</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.IntentStatusSteps.user_clicks_on_the_toggle_button_of_the_last_intent()</td>
+              <td>1</td>
+              <td class="duration" data-value="9816233200">9.816</td>
+              <td class="duration" data-value="9816233200">9.816</td>
+              <td class="duration" data-value="9816233200">9.816</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.LoginPageSteps.userLoggedInSocUIWithCredentials(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="26022218875">26.022</td>
+              <td class="duration" data-value="26022218875">26.047</td>
+              <td class="duration" data-value="104088875500">1:44.088</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.UpdateIntentSteps.the_user_navigates_to_the_Update_Intent_page()</td>
+              <td>2</td>
+              <td class="duration" data-value="12066953600">12.066</td>
+              <td class="duration" data-value="12066953600">12.099</td>
+              <td class="duration" data-value="24133907200">24.133</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.UpdateIntentSteps.the_user_submits_the_form_of_update()</td>
+              <td>2</td>
+              <td class="duration" data-value="10231617000">10.231</td>
+              <td class="duration" data-value="10231617000">10.234</td>
+              <td class="duration" data-value="20463234000">20.463</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.UpdateIntentSteps.user_clicks_on_Troubleshooting_LLMs()</td>
+              <td>1</td>
+              <td class="duration" data-value="10232835900">10.232</td>
+              <td class="duration" data-value="10232835900">10.232</td>
+              <td class="duration" data-value="10232835900">10.232</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.ViewingTicketSteps.a_pop_up_will_be_shown()</td>
+              <td>1</td>
+              <td class="duration" data-value="17033729700">17.033</td>
+              <td class="duration" data-value="17033729700">17.033</td>
+              <td class="duration" data-value="17033729700">17.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.ViewingTicketSteps.the_user_clicks_on_app()</td>
+              <td>3</td>
+              <td class="duration" data-value="62871492333">1:2.871</td>
+              <td class="duration" data-value="62871492333">1:4.134</td>
+              <td class="duration" data-value="188614477000">3:8.614</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.soc.steps.ViewingTicketSteps.user_clicks_on_the_confirm_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="62266532400">1:2.266</td>
+              <td class="duration" data-value="62266532400">1:2.266</td>
+              <td class="duration" data-value="62266532400">1:2.266</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>25</td>
+            <td>69</td>
+            <td class="duration">11.596</td>
+            <td class="duration">3:8.614</td>
+            <td class="duration">13:20.150</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
